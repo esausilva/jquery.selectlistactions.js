@@ -1,5 +1,5 @@
 ﻿/**
- *  jQuery Select List Actions
+ *  jQuery.SelectListActions
  *  https://github.com/esausilva/jquery.selectlistactions.js
  *
  *  (c) http://esausilva.com
