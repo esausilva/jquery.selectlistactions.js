@@ -1,0 +1,90 @@
+body {
+	padding: 10px;
+}
+
+#StaffList {
+  height: 350px;
+  m
+  argin-bottom: 10px;
+}
+#PresenterList,
+#ContactList,
+#FacilitatorList {
+  height: 95px;
+  margin-bottom: 10px;
+}
+
+.style-select select {
+  padding: 0;
+}
+
+.style-select select option {
+  padding: 4px 10px 4px 10px;
+}
+
+.style-select select option:hover {
+  background: #EEEEEE;
+}
+
+.add-btns {
+  padding: 0;
+}
+
+.add-btns input {
+  margin-top: 25px;
+  width: 100%;
+}
+
+.selected-left {
+  float: left;
+  width: 88%;
+}
+
+.selected-right {
+  float: left;
+}
+
+.selected-right button {
+  display: block;
+  margin-left: 4px;
+  margin-bottom: 2px;
+}
+
+@media (max-width: 517px) {
+  .selected-right button {
+    display: inline;
+    margin-bottom: 5px;
+  }
+}
+
+.subject-info-box-1,
+.subject-info-box-2 {
+  float: left;
+  width: 45%;
+}
+
+.subject-info-box-1 select,
+.subject-info-box-2 select {
+  height: 200px;
+  padding: 0;
+}
+
+.subject-info-box-1 select option,
+.subject-info-box-2 select option {
+  padding: 4px 10px 4px 10px;
+}
+
+.subject-info-box-1 select option:hover,
+.subject-info-box-2 select option:hover {
+  background: #EEEEEE;
+}
+
+.subject-info-arrows {
+  float: left;
+  width: 10%;
+}
+
+.subject-info-arrows input {
+  width: 70%;
+  margin-bottom: 5px;
+}

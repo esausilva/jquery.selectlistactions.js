@@ -1,0 +1,230 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Select List Actions - jQuery Plugin</title>
+  <meta name="description" content="Select List Actions - jQuery Plugin">
+
+  <script src="js/jquery-1.10.2.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/jquery.selectlistactions.js"></script>
+  
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/site.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+	<div class="container">
+	
+		<div class="row style-select">
+			<div class="col-md-6">
+				<label class="control-label">Superheroes</label>
+				<select multiple class="form-control" id="StaffList">
+					<option value="123">Superman</option>
+					<option value="456">Batman</option>
+					<option value="789">Spiderman</option>
+					<option value="654">Captain America</option>
+				</select>
+			</div>
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-3 col-sm-3 col-xs-3 add-btns">
+						<input type="button" id="btnPresenter" value="Add Avenger" class="btn btn-default" />
+					</div>
+					<div class="col-md-9 col-sm-9 col-xs-9">
+						<label class="control-label">Avengers</label>
+						<div class="selected-left">
+							<select multiple class="form-control" id="PresenterList">
+								<option value="856">Iron Man</option>
+							</select>
+						</div>
+						<div class="selected-right">
+							<button type="button" class="btn btn-default btn-sm" id="btnPresenterUp">
+								<span class="glyphicon glyphicon-chevron-up"></span>
+							</button>
+							<button type="button" class="btn btn-default btn-sm" id="btnPresenterDown">
+								<span class="glyphicon glyphicon-chevron-down"></span>
+							</button>
+							<button type="button" class="btn btn-default btn-sm" id="btnRemovePresenter">
+								<span class="glyphicon glyphicon-remove"></span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-3 col-sm-3 col-xs-3 add-btns">
+						<input type="button" id="btnContact" value="Add S.H.I.E.L.D." class="btn btn-default" />
+					</div>
+					<div class="col-md-9 col-sm-9 col-xs-9">
+						<label class="control-label">S.H.I.E.L.D.</label>
+						<div class="selected-left">
+							<select multiple class="form-control" id="ContactList">
+								<option value="765">Nick Fury</option>
+								<option value="698">The Hulk</option>
+							</select>
+						</div>
+						<div class="selected-right">
+							<button type="button" class="btn btn-default btn-sm" id="btnContactUp">
+								<span class="glyphicon glyphicon-chevron-up"></span>
+							</button>
+							<button type="button" class="btn btn-default btn-sm" id="btnContactDown">
+								<span class="glyphicon glyphicon-chevron-down"></span>
+							</button>
+							<button type="button" class="btn btn-default btn-sm" id="btnRemoveContact">
+								<span class="glyphicon glyphicon-remove"></span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-3 col-sm-3 col-xs-3 add-btns">
+						<input type="button" id="btnFacilitator" value="Add Justice League" class="btn btn-default" />
+					</div>
+					<div class="col-md-9 col-sm-9 col-xs-9">
+						<label class="control-label">Justice League</label>
+						<div class="selected-left">
+							<select multiple class="form-control" id="FacilitatorList">
+								
+							</select>
+						</div>
+						<div class="selected-right">
+							<button type="button" class="btn btn-default btn-sm" id="btnFacilitatorUp">
+								<span class="glyphicon glyphicon-chevron-up"></span>
+							</button>
+							<button type="button" class="btn btn-default btn-sm" id="btnFacilitatorDown">
+								<span class="glyphicon glyphicon-chevron-down"></span>
+							</button>
+							<button type="button" class="btn btn-default btn-sm" id="btnRemoveFacilitator">
+								<span class="glyphicon glyphicon-remove"></span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p>&nbsp;</p>
+		<div class="row style-select">
+			<div class="col-md-12">
+				<div class="subject-info-box-1">
+					<label>Available Superheroes</label>
+					<select multiple class="form-control" id="lstBox1">
+						<option value="123">Superman</option>
+						<option value="456">Batman</option>
+						<option value="789">Spiderman</option>
+						<option value="654">Captain America</option>
+					</select>
+				</div>
+
+				<div class="subject-info-arrows text-center">
+					<br /><br />
+					<input type='button' id='btnAllRight' value='>>' class="btn btn-default" /><br />
+					<input type='button' id='btnRight' value='>' class="btn btn-default" /><br />
+					<input type='button' id='btnLeft' value='<' class="btn btn-default" /><br />
+					<input type='button' id='btnAllLeft' value='<<' class="btn btn-default" />
+				</div>
+
+				<div class="subject-info-box-2">
+					<label>Superheroes You Have Selected</label>
+					<select multiple class="form-control" id="lstBox2">
+						<option value="765">Nick Fury</option>
+						<option value="698">The Hulk</option>
+						<option value="856">Iron Man</option>
+					</select>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+        $('#btnPresenter').click(function (e) {
+            $('select').moveToList('#StaffList', '#PresenterList');
+            e.preventDefault();
+        });
+
+        $('#btnRemovePresenter').click(function (e) {
+            $('select').removeSelected('#PresenterList');
+            e.preventDefault();
+        });
+
+        $('#btnPresenterUp').click(function (e) {
+            $('select').moveUpDown('#PresenterList', true, false);
+            e.preventDefault();
+        });
+
+        $('#btnPresenterDown').click(function (e) {
+            $('select').moveUpDown('#PresenterList', false, true);
+            e.preventDefault();
+        });
+
+        $('#btnContact').click(function (e) {
+            $('select').moveToList('#StaffList', '#ContactList');
+            e.preventDefault();
+        });
+
+        $('#btnRemoveContact').click(function (e) {
+            $('select').removeSelected('#ContactList');
+            e.preventDefault();
+        });
+
+        $('#btnContactUp').click(function (e) {
+            $('select').moveUpDown('#ContactList', true, false);
+            e.preventDefault();
+        });
+
+        $('#btnContactDown').click(function (e) {
+            $('select').moveUpDown('#ContactList', false, true);
+            e.preventDefault();
+        });
+
+        $('#btnFacilitator').click(function (e) {
+            $('select').moveToList('#StaffList', '#FacilitatorList');
+            e.preventDefault();
+        });
+
+        $('#btnRemoveFacilitator').click(function (e) {
+            $('select').removeSelected('#FacilitatorList');
+            e.preventDefault();
+        });
+
+        $('#btnFacilitatorUp').click(function (e) {
+            $('select').moveUpDown('#FacilitatorList', true, false);
+            e.preventDefault();
+        });
+
+        $('#btnFacilitatorDown').click(function (e) {
+            $('select').moveUpDown('#FacilitatorList', false, true);
+            e.preventDefault();
+        });
+		
+		$('#btnRight').click(function (e) {
+            $('select').moveToListAndDelete('#lstBox1', '#lstBox2');
+            e.preventDefault();
+        });
+
+        $('#btnAllRight').click(function (e) {
+            $('select').moveAllToListAndDelete('#lstBox1', '#lstBox2');
+            e.preventDefault();
+        });
+
+        $('#btnLeft').click(function (e) {
+            $('select').moveToListAndDelete('#lstBox2', '#lstBox1');
+            e.preventDefault();
+        });
+
+        $('#btnAllLeft').click(function (e) {
+            $('select').moveAllToListAndDelete('#lstBox2', '#lstBox1');
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>
