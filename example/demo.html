@@ -35,7 +35,7 @@
 			<div class="col-md-6">
 				<div class="row">
 					<div class="col-md-3 col-sm-3 col-xs-3 add-btns">
-						<input type="button" id="btnPresenter" value="Add Avenger" class="btn btn-default" />
+						<input type="button" id="btnAvenger" value="Add Avenger" class="btn btn-default" />
 					</div>
 					<div class="col-md-9 col-sm-9 col-xs-9">
 						<label class="control-label">Avengers</label>
@@ -45,13 +45,13 @@
 							</select>
 						</div>
 						<div class="selected-right">
-							<button type="button" class="btn btn-default btn-sm" id="btnPresenterUp">
+							<button type="button" class="btn btn-default btn-sm" id="btnAvengerUp">
 								<span class="glyphicon glyphicon-chevron-up"></span>
 							</button>
-							<button type="button" class="btn btn-default btn-sm" id="btnPresenterDown">
+							<button type="button" class="btn btn-default btn-sm" id="btnAvengerDown">
 								<span class="glyphicon glyphicon-chevron-down"></span>
 							</button>
-							<button type="button" class="btn btn-default btn-sm" id="btnRemovePresenter">
+							<button type="button" class="btn btn-default btn-sm" id="btnRemoveAvenger">
 								<span class="glyphicon glyphicon-remove"></span>
 							</button>
 						</div>
@@ -60,7 +60,7 @@
 
 				<div class="row">
 					<div class="col-md-3 col-sm-3 col-xs-3 add-btns">
-						<input type="button" id="btnContact" value="Add S.H.I.E.L.D." class="btn btn-default" />
+						<input type="button" id="btnShield" value="Add S.H.I.E.L.D." class="btn btn-default" />
 					</div>
 					<div class="col-md-9 col-sm-9 col-xs-9">
 						<label class="control-label">S.H.I.E.L.D.</label>
@@ -71,13 +71,13 @@
 							</select>
 						</div>
 						<div class="selected-right">
-							<button type="button" class="btn btn-default btn-sm" id="btnContactUp">
+							<button type="button" class="btn btn-default btn-sm" id="btnShieldUp">
 								<span class="glyphicon glyphicon-chevron-up"></span>
 							</button>
-							<button type="button" class="btn btn-default btn-sm" id="btnContactDown">
+							<button type="button" class="btn btn-default btn-sm" id="btnShieldDown">
 								<span class="glyphicon glyphicon-chevron-down"></span>
 							</button>
-							<button type="button" class="btn btn-default btn-sm" id="btnRemoveContact">
+							<button type="button" class="btn btn-default btn-sm" id="btnRemoveShield">
 								<span class="glyphicon glyphicon-remove"></span>
 							</button>
 						</div>
@@ -86,7 +86,7 @@
 
 				<div class="row">
 					<div class="col-md-3 col-sm-3 col-xs-3 add-btns">
-						<input type="button" id="btnFacilitator" value="Add Justice League" class="btn btn-default" />
+						<input type="button" id="btnJusticeLeague" value="Add Justice League" class="btn btn-default" />
 					</div>
 					<div class="col-md-9 col-sm-9 col-xs-9">
 						<label class="control-label">Justice League</label>
@@ -96,13 +96,13 @@
 							</select>
 						</div>
 						<div class="selected-right">
-							<button type="button" class="btn btn-default btn-sm" id="btnFacilitatorUp">
+							<button type="button" class="btn btn-default btn-sm" id="btnJusticeLeagueUp">
 								<span class="glyphicon glyphicon-chevron-up"></span>
 							</button>
-							<button type="button" class="btn btn-default btn-sm" id="btnFacilitatorDown">
+							<button type="button" class="btn btn-default btn-sm" id="btnJusticeLeagueDown">
 								<span class="glyphicon glyphicon-chevron-down"></span>
 							</button>
-							<button type="button" class="btn btn-default btn-sm" id="btnRemoveFacilitator">
+							<button type="button" class="btn btn-default btn-sm" id="btnRemoveJusticeLeague">
 								<span class="glyphicon glyphicon-remove"></span>
 							</button>
 						</div>
@@ -146,67 +146,67 @@
 	</div>
 	
 	<script>
-        $('#btnPresenter').click(function (e) {
+        $('#btnAvenger').click(function (e) {
             $('select').moveToList('#StaffList', '#PresenterList');
             e.preventDefault();
         });
 
-        $('#btnRemovePresenter').click(function (e) {
+        $('#btnRemoveAvenger').click(function (e) {
             $('select').removeSelected('#PresenterList');
             e.preventDefault();
         });
 
-        $('#btnPresenterUp').click(function (e) {
+        $('#btnAvengerUp').click(function (e) {
             $('select').moveUpDown('#PresenterList', true, false);
             e.preventDefault();
         });
 
-        $('#btnPresenterDown').click(function (e) {
+        $('#btnAvengerDown').click(function (e) {
             $('select').moveUpDown('#PresenterList', false, true);
             e.preventDefault();
         });
 
-        $('#btnContact').click(function (e) {
+        $('#btnShield').click(function (e) {
             $('select').moveToList('#StaffList', '#ContactList');
             e.preventDefault();
         });
 
-        $('#btnRemoveContact').click(function (e) {
+        $('#btnRemoveShield').click(function (e) {
             $('select').removeSelected('#ContactList');
             e.preventDefault();
         });
 
-        $('#btnContactUp').click(function (e) {
+        $('#btnShieldUp').click(function (e) {
             $('select').moveUpDown('#ContactList', true, false);
             e.preventDefault();
         });
 
-        $('#btnContactDown').click(function (e) {
+        $('#btnShieldDown').click(function (e) {
             $('select').moveUpDown('#ContactList', false, true);
             e.preventDefault();
         });
 
-        $('#btnFacilitator').click(function (e) {
+        $('#btnJusticeLeague').click(function (e) {
             $('select').moveToList('#StaffList', '#FacilitatorList');
             e.preventDefault();
         });
 
-        $('#btnRemoveFacilitator').click(function (e) {
+        $('#btnRemoveJusticeLeague').click(function (e) {
             $('select').removeSelected('#FacilitatorList');
             e.preventDefault();
         });
 
-        $('#btnFacilitatorUp').click(function (e) {
+        $('#btnJusticeLeagueUp').click(function (e) {
             $('select').moveUpDown('#FacilitatorList', true, false);
             e.preventDefault();
         });
 
-        $('#btnFacilitatorDown').click(function (e) {
+        $('#btnJusticeLeagueDown').click(function (e) {
             $('select').moveUpDown('#FacilitatorList', false, true);
             e.preventDefault();
         });
 		
-		$('#btnRight').click(function (e) {
+        $('#btnRight').click(function (e) {
             $('select').moveToListAndDelete('#lstBox1', '#lstBox2');
             e.preventDefault();
         });

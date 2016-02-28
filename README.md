@@ -54,6 +54,8 @@ I have included an **Example** folder in this repository that is styled with Boo
 
 The examples included are responsive and will look good in desktop as well as mobile.
 
+Take a look at the [JSFiddle](http://jsfiddle.net/nzdak7aL/) for quick view 
+
 **enjoy!**
 
  -Esau Silva
