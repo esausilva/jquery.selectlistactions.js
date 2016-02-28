@@ -13,6 +13,14 @@ With this plugin you can:
 
 ## Usage
 
+Include **jquery.selectlistactions.js** in your page
+
+```html
+<script src="js/jquery.selectlistactions.js"></script>
+```
+
+And then make your calls like this:
+
 **Scenario 1**: You have two lists and a button to move selected items between the lists, simply add the following:
 
 ```javascript
