@@ -4,12 +4,12 @@ jQuery.SelectListActions is a jQuery plugin that gives you several actions to pe
 
 With this plugin you can:
 
- * Move selected item(s) from a source list to a destination list
- * Move all items from a source list to a destination list
- * Move selected item(s) from a source list to a destination list and deleting the selected item(s) from the source list
- * Move all items from a source list to a destination list and deleting all items from the source list
- * Remove selected item(s) from a list
- * Move selected item(s) up or down a list
+* Move selected item(s) from a source list to a destination list
+* Move all items from a source list to a destination list
+* Move selected item(s) from a source list to a destination list and deleting the selected item(s) from the source list
+* Move all items from a source list to a destination list and deleting all items from the source list
+* Remove selected item(s) from a list
+* Move selected item(s) up or down a list
 
 ## Usage
 
@@ -24,35 +24,36 @@ And then make your calls like this:
 **Scenario 1**: You have two lists and a button to move selected items between the lists, simply add the following:
 
 ```javascript
-$('#buttonId').click(function (e) {
-    $('select').moveToList('#sourceListId', '#destinationListId');
-    e.preventDefault();
+$('#buttonId').click(function(e) {
+  $('select').moveToList('#sourceListId', '#destinationListId');
+  e.preventDefault();
 });
 ```
+
 **Scenario 2**: You want to remove one or more items from a list
 
 ```javascript
-$('#buttonId').click(function (e) {
-    $('select').removeSelected('#sourceListId');
-    e.preventDefault();
+$('#buttonId').click(function(e) {
+  $('select').removeSelected('#sourceListId');
+  e.preventDefault();
 });
 ```
 
 **Scenario 3**: You want to move selected items up in a list
 
 ```javascript
-$('#buttonId').click(function (e) {
-    $('select').moveUpDown('#sourceListId', true, false);
-    e.preventDefault();
+$('#buttonId').click(function(e) {
+  $('select').moveUpDown('#sourceListId', true, false);
+  e.preventDefault();
 });
 ```
 
 **Scenario 4**: You want to move selected items down in a list
 
 ```javascript
-$('#buttonId').click(function (e) {
-    $('select').moveUpDown('#sourceListId', false, true);
-    e.preventDefault();
+$('#buttonId').click(function(e) {
+  $('select').moveUpDown('#sourceListId', false, true);
+  e.preventDefault();
 });
 ```
 
@@ -62,8 +63,14 @@ I have included an **Example** folder in this repository that is styled with Boo
 
 The examples included are responsive and will look good in desktop as well as mobile.
 
-Take a look at the [JSFiddle](http://jsfiddle.net/nzdak7aL/) for quick view 
+Take a look at the [JSFiddle](http://jsfiddle.net/nzdak7aL/) for quick view
+
+## Giving Back
+
+If you liked this plug in and would like to support me, you can click the image below to get me a coffee. I would really appreciate it (but is not required).
+
+[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/black_img.png)](https://www.buymeacoffee.com/esausilva)
 
 **enjoy!**
 
- -Esau Silva
+-Esau Silva
